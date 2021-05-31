@@ -9,23 +9,13 @@ import java.awt.event.*;
 
 import java.util.*;
 
-public class FlappyBird implements ActionListener, MouseListener, KeyListener {
+public class FlappyBird extends jump implements ActionListener {
 
 	public static FlappyBird flappyBird;   // static instance of FlappyBird
-
-	public final static int WIDTH = 1200, HEIGHT = 800;
-
 	public Renderer renderer;
 
-	public static Rectangle bird;
+	public static int ticks;
 
-	public static int ticks, yMotion, score;
-
-	public static boolean gameOver, started;
-
-	public static ArrayList<Rectangle> columns;
-	
-	public Random rand;
 
 	public FlappyBird() {
 
@@ -56,25 +46,6 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener {
 
 		timer.start();
 
-	}
-
-	public void addColumn(boolean start) {
-
-		int space = 300;
-		int width = 100;
-		int height = 50 + rand.nextInt(300);
-
-		if (start) {
-			
-		columns.add(new Rectangle(WIDTH + width + columns.size() * 300, HEIGHT - height - 120, width, height));
-		columns.add(new Rectangle(WIDTH + width + (columns.size() - 1) *300, 0, width, HEIGHT - height -space));
-
-		} else {
-
-		columns.add(new Rectangle(columns.get(columns.size() - 1).x + 600, HEIGHT - height - 120, width, height));
-		columns.add(new Rectangle(columns.get(columns.size() - 1).x, 0, width, HEIGHT - height -space));
-
-		}
 	}
 
 
@@ -198,27 +169,5 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener {
 	public static void main(String[] args) {
 		flappyBird = new FlappyBird();
 	}
-		@Override
-		public void mouseClicked(MouseEvent e) {
-			jump();
-		}
-
-		@Override
-		public void mousePressed(MouseEvent e){}
-		@Override
-		public void mouseEntered(MouseEvent e){}
-		@Override
-		public void mouseExited(MouseEvent e){}
-		@Override
-		public void mouseReleased(MouseEvent e){}
-		@Override
-		public void keyTyped(KeyEvent e){}
-		@Override
-		public void keyPressed(KeyEvent e){
-			if (e.getKeyCode() == KeyEvent.VK_SPACE)
-				jump();
-		}
-		@Override
-		public void keyReleased(KeyEvent e){}
 }
 
