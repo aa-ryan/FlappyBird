@@ -156,7 +156,9 @@ public class FlappyBird extends graphMechanics implements ActionListener {
 			g.drawString("Click to Start", 100, HEIGHT/2 - 60);
 		}
 		if (gameOver) {
-			g.drawString("GAME OVER!", 150, HEIGHT/2 - 80);
+			g.drawString("GAME OVER!", 230, HEIGHT/2 - 80);
+			g.setFont(new Font("Arial", 1, 50));
+			g.drawString("Score: " + String.valueOf(score), 250, HEIGHT/2 - 20);
 		}
 
 		if (!gameOver && started) {
