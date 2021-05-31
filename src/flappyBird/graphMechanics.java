@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.*;
 import java.awt.event.*;
 
-public class jump implements MouseListener, KeyListener {
+public class graphMechanics implements MouseListener, KeyListener {
 
 	public final static int WIDTH = 1200, HEIGHT = 800;
 
@@ -17,7 +17,7 @@ public class jump implements MouseListener, KeyListener {
 
 	public Random rand;
 
-	public void jumpme() {
+	public void jump() {
 
 		if (gameOver) {
 
@@ -70,7 +70,7 @@ public class jump implements MouseListener, KeyListener {
 
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			jumpme();
+			jump();
 		}
 
 		@Override
@@ -86,7 +86,7 @@ public class jump implements MouseListener, KeyListener {
 		@Override
 		public void keyPressed(KeyEvent e){
 			if (e.getKeyCode() == KeyEvent.VK_SPACE)
-				jumpme();
+				jump();
 		}
 		@Override
 		public void keyReleased(KeyEvent e){}

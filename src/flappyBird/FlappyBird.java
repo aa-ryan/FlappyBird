@@ -9,7 +9,7 @@ import java.awt.event.*;
 
 import java.util.*;
 
-public class FlappyBird extends jump implements ActionListener {
+public class FlappyBird extends graphMechanics implements ActionListener {
 
 	public static FlappyBird flappyBird;   // static instance of FlappyBird
 	public Renderer renderer;
