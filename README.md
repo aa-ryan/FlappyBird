@@ -7,6 +7,7 @@
 		```bash
 		java -jar FlappyBird.jar
 		```
+- To play use SPACE BAR or MOUSE CLICK.
 
 - Compiling jar file from source.
 	```bash
