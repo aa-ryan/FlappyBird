@@ -93,7 +93,7 @@ public class FlappyBird extends graphMechanics implements ActionListener {
 
 			for (Rectangle column: columns) {
 
-				if (column.y == 0 && bird.x + bird.width/2 > column.x + column.width/2 - 10 && bird.x + bird.width/2 < column.x + column.width/2 + 10) {
+				if (column.y == 0 && bird.x + bird.width/2 > column.x + column.width/2 - 10 && bird.x + bird.width/2 < column.x + column.width/2 + 10 && !gameOver) {
 					score++;
 				}
 
