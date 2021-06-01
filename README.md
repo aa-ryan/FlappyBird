@@ -13,3 +13,4 @@
 	echo "Main-Class: src/flappyBird/FlappyBird" > manifest.txt
 	jar cvmf manifest.txt FlappyBird.jar ./src/flappyBird/*.class ./render/*.class
 	```
+* ![Demo](play.mov)
