@@ -40,7 +40,7 @@ fn main() {
     println!("");
     out.sort();
     for v in out {
-        println!("{} is open", v);
+        println!("PORT: {} is open", v);
     }
 }
 
